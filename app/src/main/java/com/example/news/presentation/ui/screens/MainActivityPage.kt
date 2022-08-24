@@ -1,28 +1,23 @@
-package com.example.news.presentation.ui.main.screens
+package com.example.news.presentation.ui.screens
 
-import android.content.Intent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.news.domain.modals.News
-import com.example.news.presentation.ui.app.NewsActivity
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MainActivityPage(
     onBacked: (Unit) -> Unit = {}
 ) {
-    val context = LocalContext.current
     Scaffold(
         topBar = {
             SmallTopAppBar(
@@ -35,17 +30,6 @@ fun MainActivityPage(
                     }
                 }
             )
-        },
-        floatingActionButton = {
-            FloatingActionButton(onClick = {
-                context.startActivity(Intent(context, NewsActivity::class.java))
-            }, containerColor = MaterialTheme.colorScheme.primary) {
-                Icon(
-                    imageVector = Icons.Default.Add,
-                    contentDescription = "Navigation Icon",
-                    tint = MaterialTheme.colorScheme.onPrimary
-                )
-            }
         }
     ) { values ->
         News(

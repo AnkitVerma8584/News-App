@@ -1,4 +1,4 @@
-package com.example.news.presentation.ui.main.screens
+package com.example.news.presentation.ui.screens
 
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions

@@ -22,7 +22,7 @@ class MainViewModel @Inject constructor(private val newsRepository: NewsReposito
 
     init {
         viewModelScope.launch {
-            newsState = newsState.copy(isLoading = true)
+            newsState = newsState.copy(isLoading = true, error = null)
             newsState = when (val response = newsRepository.getNews()) {
                 is Resource.Success -> {
                     newsState.copy(

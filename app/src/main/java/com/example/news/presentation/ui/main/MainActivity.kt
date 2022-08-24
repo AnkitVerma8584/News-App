@@ -8,7 +8,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import com.example.news.presentation.theme.NewsTheme
-import com.example.news.presentation.ui.main.screens.MainActivityPage
+import com.example.news.presentation.ui.screens.MainActivityPage
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
